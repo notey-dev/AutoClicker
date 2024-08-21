@@ -13,6 +13,8 @@ keyboard = "^0.13.5"
 
 [tool.poetry.group.dev.dependencies]
 pyinstaller = "^6.10.0"
+pipx = "^1.6.0"
+poetry-plugin-export = "^1.8.0"
 
 [build-system]
 requires = ["poetry-core"]
