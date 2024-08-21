@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "autoclicker"
+version = "0.1.0"
+description = "Simple AutoClicker for Windows"
+authors = ["Nathan Dunahoo <nathan@dunahoo.xyz>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11,<3.14"
+mouse = "^0.7.1"
+keyboard = "^0.13.5"
+
+
+[tool.poetry.group.dev.dependencies]
+pyinstaller = "^6.10.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

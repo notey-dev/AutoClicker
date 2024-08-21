@@ -1,0 +1,15 @@
+# Project files
+.venv
+.vscode
+dist/
+build/
+__pycache__/
+
+# Spec files
+*.spec
+# Config files
+*.ini
+# Environement files
+*.env
+# Lock files
+*.lock
