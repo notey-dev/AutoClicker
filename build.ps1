@@ -16,6 +16,10 @@ if (-Not (Test-Path $configPath)) {
 }
 
 # Run PyInstaller
-$distPath = "$env:APPDATA\AutoClicker"
+$packageName = (Select-String -Path "pyproject.toml" -Pattern 'name\s*=\s*"(.*)"').Matches.Groups[1].Value
+$distPath = "./dist"
 $icoPath = "./AutoClicker.ico"
-pyinstaller --onefile --windowed --add-data "config.ini;." --distpath $distPath --icon $icoPath --collect-all autoclicker autoclicker.py
+pyinstaller --onefile --windowed --add-data "config.ini;." --distpath $distPath --icon $icoPath --collect-all $packageName autoclicker.py
+
+# Run Inno Setup to create the installer
+& "C:\Program Files (x86)\Inno Setup 6\ISCC.exe" "installer.iss"
