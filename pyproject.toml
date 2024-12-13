@@ -2,7 +2,7 @@
 name = "autoclicker"
 version = "0.1.0"
 description = "Simple AutoClicker for Windows"
-authors = ["Nathan Dunahoo <nathan@dunahoo.xyz>"]
+authors = ["Notey <info@notey.dev>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
