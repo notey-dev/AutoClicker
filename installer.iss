@@ -14,3 +14,11 @@ Source: "config.ini"; DestDir: "{app}"; Flags: ignoreversion
 [Icons]
 Name: "{group}\AutoClicker"; Filename: "{app}\AutoClicker.exe"
 Name: "{group}\Uninstall AutoClicker"; Filename: "{uninstallexe}"
+
+[Code]
+procedure TaskKill(fileName: String);
+var
+    resultCode: Integer;
+begin
+    Exec(ExpandConstant('taskkill.exe'), '/f /im ' + '"' + fileName + '"', '', SW_HIDE, ewWaitUntilTerminated, resultCode);
+end;
